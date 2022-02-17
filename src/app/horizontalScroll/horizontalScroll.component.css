@@ -1,31 +1,32 @@
 
-  #fixedItems {
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    max-height: 100vh;
-    overflow: hidden;
-  }
-  .BassTblScroll {
-    position: fixed;
-    top: 0;
-    left: auto;
-    width: inherit;
-    z-index: 30;
-    overflow: hidden;
-    text-align: left!important;
-  }
-  .heightAndwidth{
-      width: 250px !important;
-      max-width: 250px !important;
-      min-width: 250px !important;
-      height: 50px !important;
-  }
-  .thStyles {
-    background-color: #ffeeba;
-    font-weight: bold;
-    border: 1px solid #dee2e6;
-    padding: 0.75rem;
-  }
+#z2TblScrollBar::-webkit-scrollbar,
+.z2tableContainer::-webkit-scrollbar {
+  width: 10px;
+  height: 17px;
+  background: transparent;
+}
+
+#z2TblScrollBar::-webkit-scrollbar-thumb,
+.z2tableContainer::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(0 0 0 / 40%)),
+    color-stop(0.72, rgb(0 0 0 / 40%)),
+    color-stop(0.86, rgb(0 0 0 / 40%))
+  );
+  border: #b0acac 1px solid;
+  border-radius: 5px;
+}
+#z2TblScrollBar::-webkit-scrollbar-thumb:hover,
+.z2tableContainer::-webkit-scrollbar-thumb:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(0 0 0 / 67%)),
+    color-stop(0.72, rgb(0 0 0 / 67%)),
+    color-stop(0.86, rgb(0 0 0 / 67%))
+  );
+}
