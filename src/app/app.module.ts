@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { NgHorizontalScrollModule } from 'angular-horizontal-scroll-table';
+import { HorizontalScrollComponent } from './horizontalScroll/horizontalScroll.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  imports:      [ BrowserModule, FormsModule, NgHorizontalScrollModule ],
+  declarations: [ AppComponent, HorizontalScrollComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

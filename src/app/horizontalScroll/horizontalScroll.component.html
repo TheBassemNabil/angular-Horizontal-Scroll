@@ -1,0 +1,30 @@
+<div class="mt-5">
+
+  <blockquote class="blockquote text-center">
+    <p class="mb-0">Try to add/remove column. </p>
+    <footer>
+      <button type="button" (click)="removeAddress()" class="btn btn-info">
+        {{showAddres ? 'Remove' : 'Add'}} Address Column.
+      </button>
+    </footer>
+  </blockquote>
+
+  <div class="overflow-auto p-2 " bassFixedHeaderDirective [tableId]="'cutomTableId'"
+    [tableTHeadId]="'cutomTableTHeadId'" [extraTopPx]="50" [tableTHeadTrId]="'cutomTableTHeadTrId'"
+    [tableTBodyId]="'cutomTableTBodyId'" [pageUpdated]="pageUpdated" [pageDestored]="pageDestored">
+    <table id="cutomTableId" class="table table-striped table-bordered table-hover">
+      <thead id="cutomTableTHeadId">
+        <tr id="cutomTableTHeadTrId">
+          <th scope="col" class="heightAndwidth thStyles">Email</th>
+          <th scope="col" class="heightAndwidth thStyles">Name</th>
+        </tr>
+      </thead>
+      <tbody id="cutomTableTBodyId">
+        <tr *ngFor="let item of dataList">
+          <td class="heightAndwidth">{{item.email}}</td>
+          <td class="heightAndwidth">{{item.name}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
