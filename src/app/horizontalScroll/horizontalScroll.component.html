@@ -15,14 +15,28 @@
     <table id="cutomTableId" class="table table-striped table-bordered table-hover">
       <thead id="cutomTableTHeadId">
         <tr id="cutomTableTHeadTrId">
+          <th scope="col" class="heightAndwidth thStyles">Id</th>
           <th scope="col" class="heightAndwidth thStyles">Email</th>
           <th scope="col" class="heightAndwidth thStyles">Name</th>
+          <th scope="col" class="heightAndwidth thStyles">Guid</th>
+          <th scope="col" class="heightAndwidth thStyles">Phone</th>
+          <th scope="col" class="heightAndwidth thStyles">Address</th>
+          <th scope="col" class="heightAndwidth thStyles">Registered</th>
+          <th scope="col" class="heightAndwidth thStyles">latitude</th>
+          <th scope="col" class="heightAndwidth thStyles">longitude</th>
         </tr>
       </thead>
       <tbody >
         <tr *ngFor="let item of dataList">
+          <td class="heightAndwidth">{{item._id}}</td>
           <td class="heightAndwidth">{{item.email}}</td>
           <td class="heightAndwidth">{{item.name}}</td>
+          <td class="heightAndwidth">{{item.guid}}</td>
+          <td class="heightAndwidth">{{item.phone}}</td>
+          <td class="heightAndwidth">{{item.address}}</td>
+          <td class="heightAndwidth">{{item.registered}}</td>
+          <td class="heightAndwidth">{{item.latitude}}</td>
+          <td class="heightAndwidth">{{item.longitude}}</td>
         </tr>
       </tbody>
     </table>
