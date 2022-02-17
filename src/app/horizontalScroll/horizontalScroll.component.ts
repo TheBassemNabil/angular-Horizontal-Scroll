@@ -12,7 +12,8 @@ export class HorizontalScrollComponent implements OnInit {
   pageUpdated = false;
   pageDestored = false;
 
-  showAddres = true;
+  remove4 = true;
+  remove7 = true;
 
   constructor(private httpClient: HttpClient){}
 
@@ -22,9 +23,13 @@ export class HorizontalScrollComponent implements OnInit {
     })
   }
 
-  removeAddress() {
-    this.showAddres = !this.showAddres;
+  remove4CL() {
+    this.remove4 = !this.remove4;
     this.pageUpdated = !this.pageUpdated;
   }
 
+  remove7CL() {
+    this.remove7 = !this.remove7;
+    this.pageUpdated = !this.pageUpdated;
+  }
 }

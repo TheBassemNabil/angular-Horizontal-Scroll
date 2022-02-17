@@ -3,8 +3,11 @@
   <blockquote class="blockquote text-center">
     <p class="mb-0">Try to add/remove column. </p>
     <footer>
-      <button type="button" (click)="removeAddress()" class="btn btn-info">
-        {{showAddres ? 'Remove' : 'Add'}} Address Column.
+      <button type="button" (click)="remove7CL()" class="btn btn-info">
+        {{remove7 ? 'Remove' : 'Add'}} 7 Column.
+      </button>
+      <button type="button" (click)="remove4CL()" class="btn btn-info ml-1">
+        {{remove4 ? 'Remove' : 'Add'}} 4 Column.
       </button>
     </footer>
   </blockquote>
@@ -15,8 +18,10 @@
     <table id="cutomTableId" class="table table-striped table-bordered table-hover">
       <thead id="cutomTableTHeadId">
         <tr id="cutomTableTHeadTrId">
+          
           <th scope="col" class="heightAndwidth thStyles">Id</th>
           <th scope="col" class="heightAndwidth thStyles">Email</th>
+          <ng-container *ngIf="remove7">
           <th scope="col" class="heightAndwidth thStyles">Name</th>
           <th scope="col" class="heightAndwidth thStyles">Guid</th>
           <th scope="col" class="heightAndwidth thStyles">Phone</th>
@@ -24,12 +29,20 @@
           <th scope="col" class="heightAndwidth thStyles">Registered</th>
           <th scope="col" class="heightAndwidth thStyles">latitude</th>
           <th scope="col" class="heightAndwidth thStyles">longitude</th>
+        </ng-container>
+        <ng-container *ngIf="remove4">
+        <th scope="col" class="heightAndwidth thStyles">Balance</th>
+        <th scope="col" class="heightAndwidth thStyles">Age</th>
+        <th scope="col" class="heightAndwidth thStyles">Active</th>
+        <th scope="col" class="heightAndwidth thStyles">Lname</th>
+      </ng-container>
         </tr>
       </thead>
       <tbody >
         <tr *ngFor="let item of dataList">
           <td class="heightAndwidth">{{item._id}}</td>
           <td class="heightAndwidth">{{item.email}}</td>
+          <ng-container *ngIf="remove7">
           <td class="heightAndwidth">{{item.name}}</td>
           <td class="heightAndwidth">{{item.guid}}</td>
           <td class="heightAndwidth">{{item.phone}}</td>
@@ -37,6 +50,13 @@
           <td class="heightAndwidth">{{item.registered}}</td>
           <td class="heightAndwidth">{{item.latitude}}</td>
           <td class="heightAndwidth">{{item.longitude}}</td>
+        </ng-container>
+        <ng-container *ngIf="remove4">
+        <td class="heightAndwidth">{{item.balance}}</td>
+        <td class="heightAndwidth">{{item.age}}</td>
+        <td class="heightAndwidth">{{item.isActive}}</td>
+        <td class="heightAndwidth">{{item.lname}}</td>
+      </ng-container>
         </tr>
       </tbody>
     </table>
