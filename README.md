@@ -1,6 +1,6 @@
 # Angular Horizontal Scroll table
 
-angular-Fixed-Header-table is A simple solution for fixed header in any table.
+angular-horizontal-scroll-table is A simple solution for horizontal scroll in any table.
 
 
 
