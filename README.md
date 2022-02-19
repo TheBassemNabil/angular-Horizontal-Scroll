@@ -105,5 +105,5 @@ this.pageUpdated = !this.pageUpdated;
 - tableId        : give it your table Id.
 - tableTHeadId   : give it your table thead Id.
 - tableTBodyId   : give it your table tbody Id.
-- pageUpdated    : toggle it when tab changed, or u want to resize the header again.
+- pageUpdated    : toggle it when tab changed, or u want to resize the the scroll bar again.
 - pageDestored   : toggle it when tab destored.
