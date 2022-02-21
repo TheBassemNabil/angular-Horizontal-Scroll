@@ -18,7 +18,7 @@ Install the npm package.
 ```
 Import module:
 ```ts
-  import { NgHorizontalScrollModule } from 'angular-fixed-header-table';
+  import { NgHorizontalScrollModule } from 'angular-horizontal-scroll-table';
 
   @NgModule({
       imports: [
